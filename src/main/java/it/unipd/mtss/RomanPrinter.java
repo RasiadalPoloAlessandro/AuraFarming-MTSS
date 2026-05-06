@@ -16,6 +16,10 @@ public class RomanPrinter {
                 "__      __", "\\ \\    / /", " \\ \\  / / ",
                 "  \\ \\/ /  ", "   \\  /   ", "    \\/    "
         });
+        RomanAlphabet.put('X', new String[]{
+                "__   __", "\\ \\ / /", " \\ V / ",
+                "  > <  ", " / . \\ ", "/_/ \\_\\"
+        });
     }
     public static String print(int num){
         return printAsciiArt(IntegerToRoman.convert(num));
