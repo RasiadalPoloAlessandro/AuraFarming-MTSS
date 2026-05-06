@@ -41,4 +41,17 @@ public class IntegerToRomanTest {
         // Assert
         assertEquals("VI", result);
     }
+
+    @Test
+    public void testConvertTen() {
+        // Arrange
+        int input = 10;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("X", result);
+    }
+
 }
