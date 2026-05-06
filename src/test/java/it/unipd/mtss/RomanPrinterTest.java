@@ -28,4 +28,14 @@ public class RomanPrinterTest {
         // Assert
         assertEquals(expected, result);
     }
+    @Test
+    public void testPrintLetterV(){
+        // Arrange
+        int input = 5;
+        String expected = "__      __\n\\ \\    / /\n \\ \\  / / \n  \\ \\/ /  \n   \\  /   \n    \\/    ";
+        // Act
+        String result = RomanPrinter.print(input);
+        // Assert
+        assertEquals(expected, result);
+    }
 }
