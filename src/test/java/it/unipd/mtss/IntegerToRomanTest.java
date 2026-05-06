@@ -29,4 +29,16 @@ public class IntegerToRomanTest {
         // Assert
         assertEquals("III", result);
     }
+
+    @Test
+    public void testConvertSix() {
+        // Arrange
+        int input = 6;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("VI", result);
+    }
 }
