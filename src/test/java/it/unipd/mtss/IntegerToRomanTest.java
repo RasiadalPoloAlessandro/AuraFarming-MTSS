@@ -66,4 +66,17 @@ public class IntegerToRomanTest {
         assertEquals("XX", result);
     }
 
+    @Test
+    public void testConvertFifty(){
+
+        //Arrange
+        int input = 50;
+
+        //act
+        String result = IntegerToRoman.convert(input);
+
+        //assert
+        assertEquals("L", result);
+    }
+
 }
