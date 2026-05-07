@@ -79,4 +79,17 @@ public class IntegerToRomanTest {
         assertEquals("L", result);
     }
 
+    @Test
+    public void testConvertOneHundred(){
+
+        //Arrange
+        int input = 100;
+
+        //act
+        String result = IntegerToRoman.convert(input);
+
+        //assert
+        assertEquals("C", result);
+    }
+
 }
