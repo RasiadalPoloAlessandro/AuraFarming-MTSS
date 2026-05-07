@@ -11,6 +11,8 @@ public class IntegerToRoman {
 
     private static final LinkedHashMap<Integer, String> ROMAN_NUMBERS = new LinkedHashMap<>();
     static {
+        ROMAN_NUMBERS.put(100, "C");
+        ROMAN_NUMBERS.put(90, "XC");
         ROMAN_NUMBERS.put(50, "L");
         ROMAN_NUMBERS.put(40, "XL");
         ROMAN_NUMBERS.put(10, "X");
@@ -20,7 +22,7 @@ public class IntegerToRoman {
         ROMAN_NUMBERS.put(1, "I");
     }
 
-    private static final int NUMERO_MASSIMO_RAPPRESENTABILE = 50;
+    private static final int NUMERO_MASSIMO_RAPPRESENTABILE = 100;
 
     public static String convert(int number){
         if(number < 1 || number > NUMERO_MASSIMO_RAPPRESENTABILE){
