@@ -54,4 +54,16 @@ public class IntegerToRomanTest {
         assertEquals("X", result);
     }
 
+    @Test
+    public void testConvertTwenty(){
+        //Arrange
+        int input = 20;
+
+        //act
+        String result = IntegerToRoman.convert(input);
+
+        //assert
+        assertEquals("XX", result);
+    }
+
 }
