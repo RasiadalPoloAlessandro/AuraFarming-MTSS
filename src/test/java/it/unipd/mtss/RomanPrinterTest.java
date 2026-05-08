@@ -22,7 +22,7 @@ public class RomanPrinterTest {
     public void testPrintLetterI(){
         // Arrange
         int input = 1;
-        String expected = " _____ \n|_   _|\n  | |  \n  | |  \n _| |_ \n|_____|";
+        String expected = " _____  \n|_   _| \n  | |   \n  | |   \n _| |_  \n|_____| ";
         // Act
         String result = RomanPrinter.print(input);
         // Assert
@@ -32,7 +32,17 @@ public class RomanPrinterTest {
     public void testPrintLetterV(){
         // Arrange
         int input = 5;
-        String expected = "__      __\n\\ \\    / /\n \\ \\  / / \n  \\ \\/ /  \n   \\  /   \n    \\/    ";
+        String expected = "__      __ \n\\ \\    / / \n \\ \\  / /  \n  \\ \\/ /   \n   \\  /    \n    \\/     ";
+        // Act
+        String result = RomanPrinter.print(input);
+        // Assert
+        assertEquals(expected, result);
+    }
+    @Test
+    public void testPrintVI(){ //we test for limit case
+        // Arrange
+        int input = 6;
+        String expected ="__      __  _____  \n\\ \\    / / |_   _| \n \\ \\  / /    | |   \n  \\ \\/ /     | |   \n   \\  /     _| |_  \n    \\/     |_____| ";
         // Act
         String result = RomanPrinter.print(input);
         // Assert
@@ -42,7 +52,37 @@ public class RomanPrinterTest {
     public void testPrintLetterX(){ //symbol is also limit case
         // Arrange
         int input = 10;
-        String expected = "__   __\n\\ \\ / /\n \\ V / \n  > <  \n / . \\ \n/_/ \\_\\";
+        String expected = "__   __ \n\\ \\ / / \n \\ V /  \n  > <   \n / . \\  \n/_/ \\_\\ ";
+        // Act
+        String result = RomanPrinter.print(input);
+        // Assert
+        assertEquals(expected, result);
+    }
+    @Test
+    public void testPrintXX(){ //As we have no new symbols, we test for limit case;
+        // Arrange
+        int input = 20;
+        String expected = "__   __ __   __ \n\\ \\ / / \\ \\ / / \n \\ V /   \\ V /  \n  > <     > <   \n / . \\   / . \\  \n/_/ \\_\\ /_/ \\_\\ ";
+        // Act
+        String result = RomanPrinter.print(input);
+        // Assert
+        assertEquals(expected, result);
+    }
+    @Test
+    public void testPrintL(){ //symbol is also limit case
+        // Arrange
+        int input = 50;
+        String expected = " _       \n| |      \n| |      \n| |      \n| |____  \n|______| ";
+        // Act
+        String result = RomanPrinter.print(input);
+        // Assert
+        assertEquals(expected, result);
+    }
+    @Test
+    public void testPrintC(){ //symbol is also limit case
+        // Arrange
+        int input = 100;
+        String expected = "  _____  \n / ____| \n| |      \n| |      \n| |____  \n \\_____| ";
         // Act
         String result = RomanPrinter.print(input);
         // Assert

@@ -20,6 +20,13 @@ public class RomanPrinter {
                 "__   __", "\\ \\ / /", " \\ V / ",
                 "  > <  ", " / . \\ ", "/_/ \\_\\"
         });
+        RomanAlphabet.put('L', new String[]{
+                " _      ", "| |     ", "| |     ", "| |     ", "| |____ ", "|______|"
+        });
+        RomanAlphabet.put('C', new String[]{
+                "  _____ ", " / ____|", "| |     ",
+                "| |     ", "| |____ ", " \\_____|"
+        });
     }
     public static String print(int num){
         return printAsciiArt(IntegerToRoman.convert(num));
@@ -32,6 +39,7 @@ public class RomanPrinter {
             StringBuilder asciiRow = new StringBuilder();
             for (char c : romanNumber.toCharArray()) {
                 asciiRow.append(RomanAlphabet.get(c)[i]);
+                asciiRow.append(" ");
             }
             result.append(asciiRow);
             if (i < fontHeight - 1) {
