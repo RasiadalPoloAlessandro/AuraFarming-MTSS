@@ -105,4 +105,16 @@ public class IntegerToRomanTest {
         assertEquals("D", result);
     }
 
+    @Test
+    public void testConvertThousand(){
+        //Arrange
+        int input = 1000;
+
+        //act
+        String result = IntegerToRoman.convert(input);
+
+        //assert
+        assertEquals("M", result);
+    }
+
 }
