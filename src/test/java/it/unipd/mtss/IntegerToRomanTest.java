@@ -92,4 +92,17 @@ public class IntegerToRomanTest {
         assertEquals("C", result);
     }
 
+    @Test
+    public void testConvertFifthHundred(){
+
+        //Arrange
+        int input = 500;
+
+        //act
+        String result = IntegerToRoman.convert(input);
+
+        //assert
+        assertEquals("D", result);
+    }
+
 }
