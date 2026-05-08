@@ -3,6 +3,7 @@ package it.unipd.mtss;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class IntegerToRomanTest {
 
@@ -115,6 +116,68 @@ public class IntegerToRomanTest {
 
         //assert
         assertEquals("M", result);
+    }
+
+    @Test
+    public void testConvertZero(){
+
+        //Arrange
+        int input = 0;
+
+        //act
+        String result = IntegerToRoman.convert(input);
+
+        //assert
+        assertNull(result);
+    }
+
+    @Test
+    public void testConvertNegative(){
+        //Arrange
+        int input = -2;
+
+        //act
+        String result = IntegerToRoman.convert(input);
+
+        //assert
+        assertNull(result);
+    }
+
+    @Test
+    public void testConvertNumberTooLarge(){
+        //Arrange
+        int input = 2000;
+
+        //act
+        String result = IntegerToRoman.convert(input);
+
+        //assert
+        assertNull(result);
+    }
+
+    @Test
+    public void testConvertNineHundred(){
+
+        //Arrange
+        int input = 900;
+
+        //act
+        String result = IntegerToRoman.convert(input);
+
+        //assert
+        assertEquals("CM", result);
+    }
+
+    @Test
+    public void testConvertFourHundred(){
+        //Arrange
+        int input = 400;
+
+        //act
+        String result = IntegerToRoman.convert(input);
+
+        //assert
+        assertEquals("CD", result);
     }
 
 }
