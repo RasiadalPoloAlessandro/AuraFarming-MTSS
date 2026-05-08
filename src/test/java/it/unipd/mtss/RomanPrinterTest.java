@@ -22,7 +22,7 @@ public class RomanPrinterTest {
     public void testPrintLetterI(){
         // Arrange
         int input = 1;
-        String expected = " _____ \n|_   _|\n  | |  \n  | |  \n _| |_ \n|_____|";
+        String expected = " _____  \n|_   _| \n  | |   \n  | |   \n _| |_  \n|_____| ";
         // Act
         String result = RomanPrinter.print(input);
         // Assert
@@ -32,7 +32,7 @@ public class RomanPrinterTest {
     public void testPrintLetterV(){
         // Arrange
         int input = 5;
-        String expected = "__      __\n\\ \\    / /\n \\ \\  / / \n  \\ \\/ /  \n   \\  /   \n    \\/    ";
+        String expected = "__      __ \n\\ \\    / / \n \\ \\  / /  \n  \\ \\/ /   \n   \\  /    \n    \\/     ";
         // Act
         String result = RomanPrinter.print(input);
         // Assert
@@ -52,7 +52,7 @@ public class RomanPrinterTest {
     public void testPrintLetterX(){ //symbol is also limit case
         // Arrange
         int input = 10;
-        String expected = "__   __\n\\ \\ / /\n \\ V / \n  > <  \n / . \\ \n/_/ \\_\\";
+        String expected = "__   __ \n\\ \\ / / \n \\ V /  \n  > <   \n / . \\  \n/_/ \\_\\ ";
         // Act
         String result = RomanPrinter.print(input);
         // Assert
