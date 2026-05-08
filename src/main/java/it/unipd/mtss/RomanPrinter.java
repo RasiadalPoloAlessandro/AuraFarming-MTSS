@@ -32,6 +32,7 @@ public class RomanPrinter {
             StringBuilder asciiRow = new StringBuilder();
             for (char c : romanNumber.toCharArray()) {
                 asciiRow.append(RomanAlphabet.get(c)[i]);
+                asciiRow.append(" ");
             }
             result.append(asciiRow);
             if (i < fontHeight - 1) {
