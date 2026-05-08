@@ -69,10 +69,10 @@ public class RomanPrinterTest {
         assertEquals(expected, result);
     }
     @Test
-    public void testPrintL(){
+    public void testPrintL(){ //symbol is also limit case
         // Arrange
         int input = 50;
-        String expected = " _      \n| |     \n| |     \n| |     \n| |____ \n|______| ";
+        String expected = " _       \n| |      \n| |      \n| |      \n| |____  \n|______| ";
         // Act
         String result = RomanPrinter.print(input);
         // Assert

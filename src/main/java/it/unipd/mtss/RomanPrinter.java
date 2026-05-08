@@ -20,6 +20,9 @@ public class RomanPrinter {
                 "__   __", "\\ \\ / /", " \\ V / ",
                 "  > <  ", " / . \\ ", "/_/ \\_\\"
         });
+        RomanAlphabet.put('L', new String[]{
+                " _      ", "| |     ", "| |     ", "| |     ", "| |____ ", "|______|"
+        });
     }
     public static String print(int num){
         return printAsciiArt(IntegerToRoman.convert(num));
