@@ -23,6 +23,10 @@ public class RomanPrinter {
         RomanAlphabet.put('L', new String[]{
                 " _      ", "| |     ", "| |     ", "| |     ", "| |____ ", "|______|"
         });
+        RomanAlphabet.put('C', new String[]{
+                "  _____ ", " / ____|", "| |     ",
+                "| |     ", "| |____ ", " \\_____|"
+        });
     }
     public static String print(int num){
         return printAsciiArt(IntegerToRoman.convert(num));

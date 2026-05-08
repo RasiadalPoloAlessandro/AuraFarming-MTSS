@@ -82,7 +82,7 @@ public class RomanPrinterTest {
     public void testPrintC(){ //symbol is also limit case
         // Arrange
         int input = 100;
-        String expected = "  _____    \n / ____|   \n| |        \n| |        \n| |____    \n \\_____| ";
+        String expected = "  _____  \n / ____| \n| |      \n| |      \n| |____  \n \\_____| ";
         // Act
         String result = RomanPrinter.print(input);
         // Assert
