@@ -27,6 +27,11 @@ public class RomanPrinter {
                 "  _____ ", " / ____|", "| |     ",
                 "| |     ", "| |____ ", " \\_____|"
         });
+        RomanAlphabet.put('D', new String[]{
+                " _____  ", "|  __ \\ ", "| |  | |",
+                "| |  | |", "| |__| |", "|_____/ "
+        });
+
     }
     public static String print(int num){
         return printAsciiArt(IntegerToRoman.convert(num));
