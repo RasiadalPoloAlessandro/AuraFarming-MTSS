@@ -88,4 +88,14 @@ public class RomanPrinterTest {
         // Assert
         assertEquals(expected, result);
     }
+    @Test
+    public void testPrintD(){
+        // Arrange
+        int input = 500;
+        String expected = " _____   \n|  __ \\  \n| |  | | \n| |  | | \n| |__| | \n|_____/  ";
+        // Act
+        String result = RomanPrinter.print(input);
+        // Assert
+        assertEquals(expected, result);
+    }
 }
