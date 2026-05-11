@@ -88,4 +88,24 @@ public class RomanPrinterTest {
         // Assert
         assertEquals(expected, result);
     }
+    @Test
+    public void testPrintD(){ //symbol is also limit case
+        // Arrange
+        int input = 500;
+        String expected = " _____   \n|  __ \\  \n| |  | | \n| |  | | \n| |__| | \n|_____/  ";
+        // Act
+        String result = RomanPrinter.print(input);
+        // Assert
+        assertEquals(expected, result);
+    }
+    @Test
+    public void testPrintM(){ //symbol is also limit case
+        // Arrange
+        int input = 1000;
+        String expected = " __  __  \n|  \\/  | \n| \\  / | \n| |\\/| | \n| |  | | \n|_|  |_| ";
+        // Act
+        String result = RomanPrinter.print(input);
+        // Assert
+        assertEquals(expected, result);
+    }
 }
